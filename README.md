@@ -10,3 +10,5 @@ zip -r upload.zip index.js node_modules
 ```
 
 upload zip file to AWS Lambda & create simple skill on alexa.dev
+
+NOTE: need to set alexa app id on lambda environment
