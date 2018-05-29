@@ -11,13 +11,15 @@ const languageStrings = {
   'ja-JP': {
     'translation': {
       'HELLO': 'はじめまして',
-      'BYE': 'さようなら'
+      'BYE': 'さようなら',
+      'ORDER': 'コーヒーですね、承知しました'
     }
   },
   'en-US': {
     'translation': {
       'HELLO': 'Hello',
-      'BYE': 'bye'
+      'BYE': 'bye',
+      'ORDER': 'wanna have coffee, OK'
     }
   }
 };
@@ -25,5 +27,8 @@ const languageStrings = {
 var handlers = {
   'Unhandled': function () {
     this.emit(':tell', this.t('HELLO'));
+  },
+  'orderIntent': function () {
+    this.emit(':tell', this.t('ORDER'));
   }
 };
